@@ -172,6 +172,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                                             className={clsx('py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md', displayFormErrors && !firstNameValid && 'border-red-500')}
                                                             onKeyUp={(e) => checkTextInput(e, setFirstNameValid, 2)}
                                                             onChange={handleChange}
+                                                            value={formState["first-name"]}
                                                         />
                                                     </div>
                                                 </div>
@@ -190,6 +191,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                                             className={clsx('py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md', displayFormErrors && !lastNameValid && 'border-red-500')}
                                                             onKeyUp={(e) => checkTextInput(e, setLastNameValid, 2)}
                                                             onChange={handleChange}
+                                                            value={formState["last-name"]}
                                                         />
                                                     </div>
                                                 </div>
@@ -208,6 +210,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                                             className={clsx('py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md', displayFormErrors && !emailValid && 'border-red-500')}
                                                             onKeyUp={(e) => checkEmailInput(e, setEmailValid)}
                                                             onChange={handleChange}
+                                                            value={formState["email"]}
                                                         />
                                                     </div>
                                                 </div>
@@ -225,6 +228,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                         defaultValue={''}
                                         onKeyUp={(e) => checkTextInput(e, setMessageValid, 2)}
                                         onChange={handleChange}
+                                        value={formState["message"]}
                                     />
                                                     </div>
                                                 </div>
