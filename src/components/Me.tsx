@@ -49,7 +49,7 @@ export function Me() {
                         <div className="mt-8 flex items-center space-x-12">
                             <SocialLink label={'GitHub'} link={'https://github.com/CorentinTS'} textClass={'text-gray-800'} icon={<GitHubIcon />} />
                             <SocialLink label={'Linkedin'} link={'https://github.com/CorentinTS'} textClass={'text-blue-600'} icon={<LinkedinIcon />} />
-                            <SocialLink label={'Malt'} link={'https://github.com/CorentinTS'} textClass={'text-red-500'} icon={<MaltIcon />} />
+                            <SocialLink label={'Malt'} link={'https://github.com/CorentinTS'} textClass={'text-red-600/80'} icon={<MaltIcon />} />
                         </div>
                     </div>
                 </div>
