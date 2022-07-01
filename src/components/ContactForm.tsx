@@ -129,7 +129,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                                         </div>
                                                         <div className="ml-3">
                                                             <h3 className="text-sm font-medium text-red-800">Le
-                                                                formulaire n&apos;est pas correctement remplis</h3>
+                                                                formulaire n&apos;est pas correctement rempli</h3>
                                                             <div className="mt-2 text-sm text-red-700">
                                                                 <ul role="list" className="list-disc pl-5 space-y-1">
                                                                     {!firstNameValid &&
