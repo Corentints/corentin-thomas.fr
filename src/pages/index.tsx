@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
 import {Me} from "../components/Me";
+import {Seo} from "../components/Seo";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
+      <Seo />
       <Me />
-    </div>
+    </>
   )
 }
 
