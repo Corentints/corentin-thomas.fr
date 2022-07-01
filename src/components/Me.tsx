@@ -27,12 +27,14 @@ export function Me() {
                         <Image src={logo} layout='fill' alt={'logo'} />
                     </div>
                     <div className="px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32">
-                        <SectionHeading number="1">
-                            Portfolio
-                        </SectionHeading>
-                        <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-                            <span className="block text-blue-600">Corentin Thomas –</span> Développeur web freelance <span className="text-blue-600">.</span>
-                        </p>
+                        <h1 className="mt-16 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+                            <span className="block text-blue-600">Corentin Thomas –</span> Développeur web freelance<span className="text-blue-600">.</span>
+                        </h1>
+                        <div className="absolute top-56 md:top-[9rem] lg:top-[11rem]">
+                            <SectionHeading number="1">
+                                Portfolio
+                            </SectionHeading>
+                        </div>
                         <p className="mt-4 text-lg tracking-tight text-slate-700">
                             Développeur passionné, je vous accompagne sur
                             la création de votre site internet de A à Z.
