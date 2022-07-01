@@ -1,22 +1,22 @@
-import {Fragment, useEffect, useState} from 'react'
+import {Dispatch, Fragment, SetStateAction, useEffect, useState} from 'react'
 import { Transition } from '@headlessui/react'
 import {CheckCircleIcon, ExclamationCircleIcon} from '@heroicons/react/outline'
 import { XIcon } from '@heroicons/react/solid'
 
 interface NotificationProps {
+    show: boolean,
+    setShow: Dispatch<SetStateAction<boolean>>,
     title: string,
     description: string,
     type: 'success' | 'error'
 }
 
-export function Notification({title, description, type}: NotificationProps) {
-    const [show, setShow] = useState(true)
-
+export function Notification({show, setShow, title, description, type}: NotificationProps) {
     useEffect(() => {
         window.setTimeout(() => {
             setShow(false)
         }, 3000)
-    }, [show])
+    }, [setShow, show])
 
     return (
         <>
