@@ -7,11 +7,13 @@ import {SocialLink} from "./SocialLink";
 import {GitHubIcon} from "./Icons/GitHubIcon";
 import {LinkedinIcon} from "./Icons/LinkedinIcon";
 import {MaltIcon} from "./Icons/MaltIcon";
-import ContactForm from "./ContactForm";
-import {useState} from "react";
+import {Dispatch, SetStateAction} from "react";
 
-export function Me() {
-    const [isContactFormModalOpened, setContactFormModalOpened] = useState(false)
+interface MeProps {
+    setContactFormModalOpen: Dispatch<SetStateAction<boolean>>
+}
+
+export function Me({setContactFormModalOpen}: MeProps) {
     return (
         <section
             id="author"
@@ -43,11 +45,10 @@ export function Me() {
                             et me former continuellement aux nouvelles technologies.
                           </span>
                         </p>
-                        <button onClick={() => setContactFormModalOpened(true)}
+                        <button onClick={() => setContactFormModalOpen(true)}
                            className="mt-8 inline-flex bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-blue-700 hover:to-indigo-700">
                             Travaillons ensemble <span className="ml-2">👋</span>
                         </button>
-                        <ContactForm isOpened={isContactFormModalOpened} setIsOpened={setContactFormModalOpened} />
                         <div className="mt-8 flex items-center space-x-12">
                             <SocialLink label={'GitHub'} link={'https://github.com/CorentinTS'} textClass={'text-gray-800'} icon={<GitHubIcon />} />
                             <SocialLink label={'Linkedin'} link={'https://github.com/CorentinTS'} textClass={'text-blue-600'} icon={<LinkedinIcon />} />
