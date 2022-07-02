@@ -46,10 +46,10 @@ export function Me({setContactFormModalOpen}: MeProps) {
                           </span>
                         </p>
                         <button onClick={() => setContactFormModalOpen(true)}
-                           className="mt-8 inline-flex bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-blue-700 hover:to-indigo-700">
+                           className="mt-8 inline-flex bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white outline-blue-500 hover:from-blue-700 hover:to-indigo-700">
                             Travaillons ensemble <span className="ml-2">👋</span>
                         </button>
-                        <div className="mt-8 flex items-center space-x-12">
+                        <div className="mt-8 grid grid-cols-2 gap-6 xs:flex xs:flex-wrap xs:items-center xs:space-x-12">
                             <SocialLink label={'GitHub'} link={'https://github.com/CorentinTS'} textClass={'text-gray-800'} icon={<GitHubIcon />} />
                             <SocialLink label={'Linkedin'} link={'https://www.linkedin.com/in/corentin-thomas/'} textClass={'text-blue-600'} icon={<LinkedinIcon />} />
                             <SocialLink label={'Malt'} link={'https://www.malt.fr/profile/corentinthomas'} textClass={'text-red-600/80'} icon={<MaltIcon />} />

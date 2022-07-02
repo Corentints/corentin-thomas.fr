@@ -104,7 +104,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                 <div className="absolute top-3 right-3 pt-4 pr-4">
                                     <button
                                         type="button"
-                                        className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                        className="text-gray-400 hover:text-gray-500 outline-blue-500"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         <span className="sr-only">Close</span>
@@ -235,7 +235,7 @@ export default function ContactForm({isOpen, setIsOpen, setEmailSent, setEmailEr
                                                 <div className="sm:col-span-2">
                                                     <button
                                                         type="submit"
-                                                        className="mt-4 inline-flex bg-gradient-to-r from-blue-600 to-blue-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-blue-700 hover:to-blue-700"
+                                                        className="mt-4 inline-flex bg-gradient-to-r from-blue-600 to-blue-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-blue-700 hover:to-blue-700 outline-blue-500"
                                                     >
                                                         Envoyer <span className="ml-2">📩</span>
                                                     </button>

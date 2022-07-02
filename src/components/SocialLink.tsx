@@ -11,7 +11,7 @@ export function SocialLink({label, link, textClass, icon}: SocialLinkProps) {
     return (
         <a
             href={link}
-            className={`inline-flex items-center text-base font-medium tracking-tight ${textClass}`}
+            className={`inline-flex items-center text-base font-medium tracking-tight outline-blue-500 ${textClass}`}
         >
             {icon}
             <span className="ml-4">{label}</span>
