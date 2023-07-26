@@ -58,7 +58,6 @@ export function NavBar() {
   }, [])
 
   const open = false
-  const close = true
 
   return (
     <div ref={navBarRef} className="sticky top-0 z-50">
