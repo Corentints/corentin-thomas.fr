@@ -8,6 +8,16 @@ module.exports = {
     extend: {
       screens: {
         'xs': '480px'
+      },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'translateY(-5px)' },
+          '50%': { transform: 'translateY(5px)' },
+          '100%': { transform: 'translateY(-5px)' },
+        }
+      },
+      animation: {
+        wave: 'wave 2s ease-in-out infinite',
       }
     },
   },
