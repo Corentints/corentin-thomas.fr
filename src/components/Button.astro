@@ -1,0 +1,22 @@
+---
+const { href, external = false } = Astro.props;
+const buttonClassName =
+  'inline-flex items-center gap-x-1.5 rounded-md bg-slate-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-900/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 [&_svg]:size-5 [&_svg]:mr-1';
+---
+
+{
+  href ? (
+    <a
+      rel={external ? 'noopener noreferrer' : undefined}
+      target={external ? '_blank' : undefined}
+      href={href}
+      class={buttonClassName}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button type="button" class={buttonClassName}>
+      <slot />
+    </button>
+  )
+}

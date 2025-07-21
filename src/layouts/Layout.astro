@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+
+const seoProps = {
+  title: 'Corentin Thomas | Portfolio',
+  description:
+    'Corentin Thomas, développeur web freelance à Metz. Création ou refonte de site internet, intégration, réferencement, développement mobile',
+  bannerUrl: `https://corentin-thomas.fr/static/images/banner.png`,
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{seoProps.title}</title>
+
+    <meta name="description" content={seoProps.description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={'https://corentin-thomas.fr'} />
+    <meta property="og:title" content={seoProps.title} />
+    <meta property="og:description" content={seoProps.description} />
+    <meta property="og:image" content={seoProps.bannerUrl} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={'https://corentin-thomas.fr'} />
+    <meta property="twitter:title" content={seoProps.title} />
+    <meta property="twitter:description" content={seoProps.description} />
+    <meta property="twitter:image" content={seoProps.bannerUrl} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
