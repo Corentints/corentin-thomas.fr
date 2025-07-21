@@ -1,0 +1,64 @@
+---
+import Layout from '@layouts/Layout.astro';
+import GridPattern from '@components/GridPattern.astro';
+import {
+  LinkedinIcon,
+  GithubIcon,
+  MaltIcon,
+  EmailIcon,
+} from '@components/icons/index.astro';
+import mePicture from '@assets/me.jpg';
+import { Image } from 'astro:assets';
+import Button from '@components/Button.astro';
+---
+
+<Layout>
+  <GridPattern />
+  <div class="min-h-screen py-32 bg-slate-900 flex items-center justify-center">
+    <div
+      class="p-8 md:p-12 lg:p-24 bg-white shadow-lg rounded-lg relative z-10 mx-auto max-w-5xl"
+    >
+      <div
+        class="md:absolute md:-top-24 lg:-top-12 mx-auto md:right-4 lg:right-12 shadow-lg flex items-center justify-center w-64 h-64 rounded-full bg-slate-900 md:[shape-outside:circle(40%)]"
+      >
+        <Image
+          src={mePicture}
+          width={256}
+          height={256}
+          alt="Corentin Thomas"
+          class="w-[95%] h-[95%] object-cover rounded-full"
+        />
+      </div>
+
+      <h1
+        class="font-display mt-4 md:mt-16 text-5xl font-extrabold tracking-tight text-slate-800 sm:text-6xl"
+      >
+        <span class="block text-slate-900">Corentin Thomas</span>
+        Développeur web freelance<span class="text-slate-900">.</span>
+      </h1>
+      <div class="absolute top-56 md:top-[9rem] lg:top-[11rem]"></div>
+      <p class="mt-4 text-lg tracking-tight text-slate-700">
+        Fort d'une expérience de plus de 5 ans dans le développement web, je
+        vous accompagne sur la création de votre projet de A à Z.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center space-x-4">
+        <Button external href="https://github.com/CorentinTS">
+          <GithubIcon />
+          GitHub
+        </Button>
+        <Button external href="mailto:corentin.thomas@gmail.com">
+          <LinkedinIcon />
+          Linkedin
+        </Button>
+        <Button external href="https://www.malt.fr/profile/corentinthomas">
+          <MaltIcon />
+          Malt
+        </Button>
+        <Button external href="mailto:thomas.corentin57@gmail.com">
+          <EmailIcon />
+          Email
+        </Button>
+      </div>
+    </div>
+  </div>
+</Layout>
